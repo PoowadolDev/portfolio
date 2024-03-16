@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from 'next/image'
 import BG from './img/BG.jpg'
 import { Suspense } from "react";
-import {Loading} from './loading.js'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -53,7 +52,6 @@ export default function RootLayout({ children }) {
           </ul>
         </div>
       </div>
-      <Suspense fallback={Loading}></Suspense>
       <div>
         {children}
       </div>

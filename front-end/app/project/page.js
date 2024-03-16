@@ -1,4 +1,9 @@
-export default function Project() {
+"use server"
+
+import Image from 'next/image';
+import fooddelivery from '../img/fooddelivery.jpg'
+
+export default async function Project() {
     return (
         <section className="overflow-auto font-mono">
             <div className="grid mt-40 mb-40">
@@ -12,7 +17,12 @@ export default function Project() {
                     <div className="grid grid-cols-3 gap-10">
                         <div className="rounded-xl w-96 bg-base-100 shadow-xl">
                             <figure className="px-10 pt-10">
-                                <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" className="rounded-xl" />
+                            <Image
+                                    src={fooddelivery}
+                                    width={500}
+                                    height={500}
+                                    alt="P"
+                                    />
                             </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">Web Application Order Food</h2>
