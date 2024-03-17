@@ -15,7 +15,7 @@ export default async function Home() {
                 <p className='text-wrap my-5'>I'M <span className='text-sky-400/100'>POOWADOL RUNGTABNAPA</span></p>
                 <p className='my-2 text-sky-400/100'><AutoType text="Software Developer"/></p>
               </div>
-              <div className='grid grid-cols-2 gap-5 m-0 mt-48 p-0 w-full auto-cols-max'>
+              <div className='grid grid-cols-2 mt-48 '>
                 <div className="ms-20 text-4xl font-medium">
                     <p className='text-wrap ms-20 mb-20'>LET ME <span className='text-sky-400/100'>INTRODUCE</span> MESELF</p>
                       <div className='grid gap-4 text-xl'>
@@ -34,15 +34,16 @@ export default async function Home() {
                       </div>
                   </div>
 
-                  <div className='absolute top-89 left-1/2 ms-36 avatar'>
-                  <div className="w-46 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
-                    <Image
-                          src={profilePic}
-                          width={500}
-                          height={500}
-                          alt="Picture of the author"
-                        />
-                  </div>
+                  <div className='absolute mt-28 me-20 top-1/2 right-2 avatar'>
+                    <div className="w-46 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2">
+                      <Image
+                            src={profilePic}
+                            layout='flex'
+                            width={500}
+                            height={500}
+                            alt="Picture of the author"
+                          />
+                    </div>
                   </div>
               </div>
             </div>

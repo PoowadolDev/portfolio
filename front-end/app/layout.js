@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       layout="fill"
       objectFit="cover"
       /></div>
-      <div className="navbar font-mono fixed bg-base-100 px-24 top-0 overflow-visible">
+      <div className="navbar font-mono fixed bg-base-100 px-24 top-0 z-40">
         <div className="flex-1">
           <a className="btn btn-ghost text-5xl">PR.</a>
         </div>
@@ -48,14 +48,16 @@ export default function RootLayout({ children }) {
               
             </li>
             <li><Link href="/project">Project</Link></li>
-            <li><Link href="/resume">Resume</Link></li>
           </ul>
         </div>
       </div>
-      <div>
-        {children}
+      <div className="">
+        <div className="overflow-auto">
+          {children}
+        </div>
       </div>
-      <footer className="footer footer-center pt-10 py-10 p-4 bg-base-300 text-base-content buttom-100">
+
+      <footer className="footer footer-center pt-10 py-10 p-4 bg-base-300 text-base-content buttom-100 z-40">
         <aside>
           <div className="absolute ps-10 left-0">
             <p>Designed and Developed by Poowadol Rungtabnapa</p>
