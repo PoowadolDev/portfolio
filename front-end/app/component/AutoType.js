@@ -9,7 +9,7 @@ function AutoType({ text, options = {} }) {
   
     useEffect(() => {
       const typed = new Typed(el.current, {
-        strings: ["Software Developer", "Backend Developer", "Frontend Developer"],
+        strings: ["Software Developer", "Backend Developer", "Frontend Developer", "Data Scientist"],
         typeSpeed: 50, // Adjust typing speed
         backSpeed: 50, // Disable backspacing
         loop: true // Loop the animation

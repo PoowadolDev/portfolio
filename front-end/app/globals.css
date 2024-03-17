@@ -21,3 +21,7 @@
     text-wrap: balance;
   }
 }
+
+[data-theme="dark"] .Context {
+  color : white
+}
