@@ -7,8 +7,11 @@ const nextConfig = {
         config.externals = [...config.externals, { canvas: "canvas" }]; // required for the canvas to work
         return config;
       },
-      basePath: "/portfolio",
-      reactStrictMode: true,
+      output: 'export',
+      distDir: 'dist',
+      images: {
+        unoptimized: true
+      },
 };
 
 export default nextConfig;
