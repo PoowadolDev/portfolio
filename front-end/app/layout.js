@@ -3,9 +3,6 @@ import "./globals.css";
 // import { fas, far, fal } from '@awesome.me/kit-KIT_CODE/icons'
 import Image from 'next/image'
 import BG from './img/BG.jpg'
-import BG_Light from './img/BG_light.jpg'
-import { Suspense } from "react";
-import Providers from "./providers";
 import  Navbar  from "./component/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,9 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="dark">
+      
       <body className={inter.className}>
-      <Providers>
         <div className="blur-xl" style={{
           zIndex: -1, 
           position: 'fixed',
@@ -36,17 +33,28 @@ export default function RootLayout({ children }) {
         </div>
 
         <footer className="footer footer-center pt-10 py-10 p-4 bg-base-300 text-base-content text-xs md:text-ms buttom-100 z-40">
-          <aside>
-            <div className="absolute ps-10 left-0">
-              <p>Designed and Developed by Poowadol Rungtabnapa</p>
-            </div>
-            <div className="absolute pe-10 right-0">
-              <p>Copyright © 2024</p>
-            </div>
 
-          </aside>
+            <div className="grid grid-cols-1 md:hidden">
+              <div className=" ps-2 left-0">
+                <p>Designed and Developed by Poowadol Rungtabnapa</p>
+              </div>
+              <div className="pe-2 right-0">
+                <p>Copyright © 2024</p>
+              </div>
+            </div>
+            <aside className="hidden md:flex">
+            <div className="absolute ps-5 left-0">
+                <p>Designed and Developed by Poowadol Rungtabnapa</p>
+              </div>
+              <div className="absolute  pe-5 right-0">
+                <p>Copyright © 2024</p>
+              </div>
+            </aside>
+
+
+
+
         </footer>
-      </Providers>
         </body>
 
     </html>

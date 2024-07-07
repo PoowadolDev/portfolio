@@ -10,7 +10,7 @@ export default async function Home() {
 
   const text = ["Software Developer", "Test"];
   return (
-      <section className='overflow-auto ms-20 sm:ms-20 md:ms-40  lg:ms-30 xl:ms-40 2xl:ms-60 font-mono'>
+      <section className='overflow-auto ms-5 mt-20  sm:ms-20 md:ms-40  lg:ms-30 xl:ms-40 2xl:ms-60 font-mono'>
         <div className='flex justify-center'>
           <div className="grid grid-rows-2">
                 <div className='grid grid-rows-2 md:grid-rows-2   xl:grid-cols-2'>
@@ -24,15 +24,14 @@ export default async function Home() {
 
                   <div className='relative'>
                       <div className='absolute right-20  sm:right-20  md:right-36 md:top-10 lg:right-24 lg:top-0 xl:right-32 xl:top-32 2xl:right-20 2xl:top-40 avatar'>
-                        <div className="w-50 rounded-full ring ring-sky-400/100 ring-offset-base-100 ring-offset-2">
-                          <Suspense fallback={Loading}>
+                        <div className="w-fit h-fit lg:h-96 md:w-80 md:h-80 lg:w-96 xl:w-fit xl:h-fit rounded-full ring ring-sky-400/100 ring-offset-base-100 ring-offset-2">
                             <Image
                                   src={profilePic}
+                                  loader={Loading}
                                   layout='flex'
                                   sizes="50vw"
                                   alt="Picture of the author"
                                 />
-                          </Suspense>
 
                         </div>
                       </div>
@@ -40,8 +39,8 @@ export default async function Home() {
                 </div>
                 
                 {/* <div className='grid grid-rows-2 xl:grid-cols-1 mt-0 bottom-0 me-10 md:mt-32 md:me-20'> */}
-                  <div className="text-xl md:text-3xl lg:text-4xl font-normal mt-30 bottom-0 me-10 md:mt-52 md:me-20 mb-20">
-                      <p className='text-wrap mb-20'>LET ME <span className='text-sky-400/100'>INTRODUCE</span> MYSELF</p>
+                  <div className="text-xl mt-2 sm:mt-40 md:text-3xl lg:text-4xl font-normal bottom-0 me-10 md:mt-48 md:me-20 mb-20">
+                      <p className='text-wrap mb-10 md:mb-20'>LET ME <span className='text-sky-400/100'>INTRODUCE</span> MYSELF</p>
                         <div className='grid gap-4 text-sm md:text-lg xl:text-2xl font-sans'>
                           <div>
                             <p>I'm a passionate Programmer with a strong desire to build innovative. I enjoy tackling complex problems and transforming them into efficient solutions</p>
