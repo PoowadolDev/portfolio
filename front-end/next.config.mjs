@@ -8,7 +8,6 @@ const nextConfig = {
         return config;
       },
       basePath: "/portfolio",
-      output: "export",  // <=== enables static exports
       reactStrictMode: true,
 };
 
