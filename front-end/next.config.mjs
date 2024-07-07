@@ -7,7 +7,7 @@ const nextConfig = {
         config.externals = [...config.externals, { canvas: "canvas" }]; // required for the canvas to work
         return config;
       },
-      distDir: 'dist',
+      basePath: "/portfolio",
       images: {
         unoptimized: true
       },
