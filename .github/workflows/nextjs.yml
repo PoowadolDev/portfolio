@@ -34,6 +34,7 @@ jobs:
       - name: Checkls
         run: |
           ls
+          npm --version
       - name: Detect package manager
         id: detect-package-manager
         run: |
