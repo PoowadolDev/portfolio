@@ -83,6 +83,9 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        run: |
+          pwd
+          ls
         with:
           path: ./out
 
