@@ -10,6 +10,7 @@ runs:
 
     - name: Cache dependencies ⚡
       id: cache_dependencies
+      cache-dependency-path: '**/front-end/package-lock.json'
       uses: actions/cache@v3
       with:
         path: node_modules
