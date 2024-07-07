@@ -7,11 +7,7 @@ const nextConfig = {
         config.externals = [...config.externals, { canvas: "canvas" }]; // required for the canvas to work
         return config;
       },
-      images: {
-        loader: 'akamai',
-        path: '',
-      },
-      assetPrefix: 'https://./',
+      reactStrictMode: true,
       basePath: '/portfolio',
 };
 
