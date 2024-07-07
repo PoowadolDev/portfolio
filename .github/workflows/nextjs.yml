@@ -36,7 +36,7 @@ jobs:
            ls
       - name: docker-build
         run: |
-            docker build
+            docker build Dockerfile
       - name: Detect package manager
         id: detect-package-manager
         run: |
