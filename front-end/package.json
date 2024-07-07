@@ -1,10 +1,13 @@
 {
   "name": "front-end",
   "version": "0.1.0",
+  "homepage": "https://PoowadolDev.github.io/portfolio/",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d .next",
     "start": "next start",
     "lint": "next lint"
   },
@@ -28,6 +31,7 @@
   "devDependencies": {
     "autoprefixer": "^10.0.1",
     "daisyui": "^4.7.3",
+    "gh-pages": "^6.1.1",
     "pdf": "^0.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0"

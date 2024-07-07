@@ -1,4 +1,4 @@
-import DownloadLink from '../components/DownloadLink';
+import DownloadLink from './DownloadLink';
 
 const HomePage = () => {
   const fileUrl = '/your-file.pdf'; // Replace with your file path in public directory
