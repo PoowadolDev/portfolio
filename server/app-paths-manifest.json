@@ -2,6 +2,6 @@
   "/_not-found": "app/_not-found.js",
   "/component/route": "app/component/route.js",
   "/about/page": "app/about/page.js",
-  "/test/page": "app/test/page.js",
-  "/project/page": "app/project/page.js"
+  "/project/page": "app/project/page.js",
+  "/test/page": "app/test/page.js"
 }
