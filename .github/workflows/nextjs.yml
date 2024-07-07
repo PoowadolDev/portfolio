@@ -12,11 +12,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-defaults:
-  run:
-    shell: bash
-    working-directory: ./front-end
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -29,6 +24,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ./front-end
+
 jobs:
   # Build job
   build:
@@ -36,6 +36,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Checkls
+        run: |
+           ls
       - name: Detect package manager
         id: detect-package-manager
         run: |
