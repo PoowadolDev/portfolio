@@ -24,6 +24,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+defaults:
+  run:
+    working-directory: ./scripts
+
 jobs:
   # Build job
   build:
@@ -34,9 +38,6 @@ jobs:
       - name: Checkls
         run: |
            ls
-      - name: docker-build
-        run: |
-            docker build Dockerfile
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -48,7 +49,7 @@ jobs:
           elif [ -f "${{ github.workspace }}/front-end/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx --no-install" >> $GITHUB_OUTPUT
+            echo "runner=npm --no-install" >> $GITHUB_OUTPUT
             exit 0
           else
             echo "Unable to determine package manager"
