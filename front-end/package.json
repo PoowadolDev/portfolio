@@ -1,7 +1,6 @@
 {
   "name": "front-end",
   "version": "0.1.0",
-  "homepage": "https://PoowadolDev.github.io/portfolio/",
   "private": true,
   "scripts": {
     "dev": "next dev",
