@@ -24,10 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    working-directory: ./front-end
-
 jobs:
   # Build job
   build:
@@ -38,6 +34,9 @@ jobs:
       - name: Checkls
         run: |
            ls
+      - name: docker-build
+        run: |
+            docker build
       - name: Detect package manager
         id: detect-package-manager
         run: |
